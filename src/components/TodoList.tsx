@@ -5,21 +5,33 @@ function TodoList() {
   return (
     <ul className="todo-list">
       <li className="todo-list-item">
-        <label><input type="checkbox" /> Заправить постель </label>
+        <label className="check option">
+          <input className="check__input" type="checkbox" />
+          <div className="check__box"></div>
+          Заправить постель
+        </label>
         <div className="controls">
           <button className="btn-important"><Icon type="important" width={35} /></button>
           <button className="btn-trash"><Icon type="trash" width={35} /></button>
         </div>
       </li>
       <li className="todo-list-item">
-        <label> <input type="checkbox" /> Обнять любимую </label>
+        <label className="check option">
+          <input className="check__input" type="checkbox" />
+          <div className="check__box"></div>
+          Обнять любимую
+        </label>
         <div className="controls">
           <button className="btn-important"><Icon type="important" width={35} /></button>
           <button className="btn-trash"><Icon type="trash" width={35} /></button>
         </div>
       </li>
       <li className="todo-list-item">
-        <label> <input type="checkbox" /> Купить молока </label>
+        <label className="check option">
+          <input className="check__input" type="checkbox" />
+          <div className="check__box"></div>
+          Купить молока
+        </label>
         <div className="controls">
           <button className="btn-important"><Icon type="important" width={35} /></button>
           <button className="btn-trash"><Icon type="trash" width={35} /></button>

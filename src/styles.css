@@ -191,11 +191,6 @@ html {
   font-weight: 300;
 }
 
-.todo-list-item input,
-.todo-list-item label {
-  cursor: pointer;
-}
-
 .todo-list-item .controls button {
   border: none;
   background: none;
@@ -228,10 +223,6 @@ html {
 }
 
 
-.todo-list-item label {
-  display: flex;
-  align-items: center;
-}
 .todo-list-item:first-child, 
 .todo-list-item:last-child {
   margin: 0;
@@ -270,4 +261,49 @@ html {
 .todo-status-filter button:first-child,
 .todo-status-filter button:last-child {
   margin: 0;
+}
+
+
+/*
+  Custom Checkbox
+*/
+
+.option {
+  display: block;
+}
+
+.check {
+  padding-left: 25px;
+  font-weight: 300;
+  position: relative;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.check__input {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.check__box {
+  width: 15px;
+  height: 15px;
+  overflow: hidden;
+  border-radius: 2px;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border: 1px solid #c3cbd8;
+  position: absolute;
+  left: 0;
+}
+
+/* Checked */
+
+.check__input:checked + .check__box {
+  background-color: rgba(81, 107, 240, .55);;
+  background-image: url('./assets/img/checked.svg');
+  background-size: 58%;
 }
