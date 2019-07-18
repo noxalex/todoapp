@@ -1,0 +1,9 @@
+.svg-icon path,
+.svg-icon rect,
+.svg-icon polygon,
+.svg-icon circle,
+.svg-icon ellipse,
+.svg-icon line,
+.svg-icon polyline {
+  fill: currentColor;
+}

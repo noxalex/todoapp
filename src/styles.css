@@ -1,0 +1,272 @@
+* {
+  font-family: Roboto;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url('./assets/img/main-mg.jpg') no-repeat; 
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+
+.overlay {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, .15);
+  z-index: -1;
+}
+
+.todo-container {  
+  background-color: rgba(255, 255, 255, .75);
+  box-shadow: 0px 0px 0px 15px rgba(158, 189, 184, .75);
+  border-radius: 30px;
+  width: 380px;
+  margin: 80px auto 0 auto;
+  padding: 0 35px 30px 35px;
+}
+
+.todo-app {
+  width: 380px;
+  margin: 0 auto;
+  border-radius: 10px;
+  background-color: #e4ecec;
+  box-shadow: 0px 0px 0px 10px rgba(238, 163, 151, .75);
+}
+
+.todo-search {
+  border: none;
+  border-radius: 20px;
+  font-size: 18px;
+  font-weight: 300;
+  padding: 7px 20px;
+  outline: none;
+  width: 320px;
+  margin: 0 auto;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: 0px -2px 2px 1px #cfc7cb;
+}
+
+.app-header {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0 10px 0;
+}
+.app-header .todo-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.todo-status .statuses > div {
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  padding: 0 0 0 5px;
+  height: 20px;
+  position: relative;
+  border: 1px solid #fff;
+  border-right: none;
+}
+
+.todo-status .statuses .done {  
+  background-color: rgba(146, 239, 184, .55);
+  z-index: 1;
+}
+.todo-status .statuses .todo {
+  background-color: rgb(233, 229, 174, .55);
+  border-top: none;
+}
+
+.todo-status .statuses .status-label {
+  font-size: 12px;
+  color: #635b67;
+  font-weight: 500;
+}
+
+.todo-status .statuses .status-num {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  border: 3px solid #fff;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: bold;
+  align-items: center;
+  color: #352c3a;
+}
+.todo-status .statuses .done .status-num {
+  background-color: rgba(146, 239, 184, .55)
+}
+
+
+.app-header .todo-status  h1 {
+  padding: 0;
+  margin: 0;
+  font-size: 58px;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  background-color: #f13b21;
+  color: transparent;
+  text-shadow: 0px 1px 2px rgba(255,255,255,.35);
+  line-height: 48px;
+}
+
+
+.todo-add-item {
+  padding: 15px;
+  border: 3px solid rgba(81, 107, 240, 0.55);
+  border-radius: 9px;
+  border-bottom: none;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: 0px 4px 0px -1px rgba(255,255,255, .9);
+  background: rgba(255, 255, 255, 0.7);
+  display: flex;
+}
+
+.todo-add-item input {
+  font-size: 28px;
+  border: none;
+  background: #f7f9f9;
+  outline: none;
+  font-weight: 100;
+  width: 300px;
+}
+
+.todo-add-item button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+}
+.todo-add-item button .icon-add {
+  color: #A1D3A2;
+  opacity: .55;
+  transition: all .3s;
+}
+
+.todo-add-item button:hover .icon-add {
+  color: #A1D3A2;
+  opacity: 1;
+}
+.todo-add-item button:active {
+  top: 1px;
+}
+
+
+.todo-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  border: 3px solid rgba(81, 107, 240, 0.55);
+  border-radius: 9px;
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.todo-list-item {
+  padding: 15px 10px;
+  border: 0 solid rgba(81, 107, 240, 0.55);
+  border-width: 1px 0 0 0;
+  box-shadow: 0px 4px 0px -1px rgba(255,255,255, .9);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.todo-list-item input,
+.todo-list-item label {
+  cursor: pointer;
+}
+
+.todo-list-item .controls button {
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+}
+.todo-list-item .controls button:active{
+  top: 1px;
+}
+
+.todo-list-item .btn-important .icon-important {
+  color: rgba(253, 231, 81, 1);
+  opacity: .55;
+  transition: all .3s;
+}
+.todo-list-item .btn-important:hover .icon-important {
+  color: rgba(253, 231, 81, 1);
+  opacity: 1;
+}
+.todo-list-item .btn-trash .icon-trash {
+  color: rgba(139, 139, 193, 1);
+  opacity: .7;
+  transition: all .3s;
+}
+
+.todo-list-item .btn-trash:hover .icon-trash {
+  color: rgba(139, 139, 193, 1);
+  opacity: 1;
+}
+
+
+.todo-list-item label {
+  display: flex;
+  align-items: center;
+}
+.todo-list-item:first-child, 
+.todo-list-item:last-child {
+  margin: 0;
+}
+.todo-list-item:last-child {
+  box-shadow: none;
+}
+.todo-status-filter {
+  margin-top: 20px;
+}
+
+.todo-status-filter button {
+  background-color: #e4ecec;
+  padding: 3px 10px 5px 10px;
+  margin: 0 10px;
+  border: 3px solid #fff;
+  border-radius: 50px;
+  outline: none;
+  color: #635b67;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.todo-status-filter button:hover {
+  color: #352c3a;
+  background-color: #d9e1e1;
+}
+
+.todo-status-filter button.active {
+  border-color: rgba(146, 239, 184, 1);
+  font-weight: 700;
+}
+
+
+.todo-status-filter button:first-child,
+.todo-status-filter button:last-child {
+  margin: 0;
+}
