@@ -151,6 +151,7 @@ html {
   cursor: pointer;
   outline: none;
   position: relative;
+  padding: 0;
 }
 .todo-add-item button .icon-add {
   color: #A1D3A2;
